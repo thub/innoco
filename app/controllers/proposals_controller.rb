@@ -37,7 +37,7 @@ class ProposalsController < ApplicationController
 
     respond_to do |format|
       if @proposal.save
-        flash[:notice] = 'Proposal was successfully created.'
+        flash[:notice] = 'Ditt bidrag ble registrert.'
         format.html { redirect_to(@proposal) }
       else
         format.html { render :action => "new" }
@@ -56,7 +56,7 @@ class ProposalsController < ApplicationController
 
     respond_to do |format|
       if @proposal.update_attributes(params[:proposal])
-        flash[:notice] = 'Proposal was successfully updated.'
+        flash[:notice] = 'Ditt bidrag ble oppdatert.'
         format.html { redirect_to(@proposal) }
       else
         format.html { render :action => "edit" }

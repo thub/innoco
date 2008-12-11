@@ -118,10 +118,9 @@ height: 50px;
 
 P.dashed
 {
-    width: 200px;
+    width: 400px;
 	border-bottom: dashed 2px #AFA162;    
     clear: both;
-	/*overflow:auto;*/
 }
 
 

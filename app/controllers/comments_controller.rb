@@ -1,15 +1,5 @@
 class CommentsController < ApplicationController
 
-  def show
-    @comment = Comment.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-    end
-  end
-
-  
-
   def edit
     @comment = Comment.find(params[:id])
   end
@@ -22,10 +12,11 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        flash[:notice] = 'Comment was successfully created.'
+        flash[:notice] = 'Din kommentar ble registrert.'
         format.html { redirect_to(@comment.regards_proposal) }
       else
-        format.html { render :action => "new" }
+        flash[:notice] = 'En feil oppstod. Kunne ikke registrere din kommentar'
+        format.html { redirect_to(@comment.regards_proposal)}
       end
     end
   end
@@ -35,8 +26,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
-        flash[:notice] = 'Comment was successfully updated.'
-        format.html { redirect_to(@comment) }
+        flash[:notice] = 'Din kommentar ble oppdatert'
+        format.html { redirect_to(@comment.regards_proposal) }
       else
         format.html { render :action => "edit" }
       end
@@ -46,9 +37,10 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-
+    flash[:notice] = 'Din kommentar ble slettet'
+    
     respond_to do |format|
-      format.html { redirect_to(comments_url) }
+      format.html { redirect_to(@comment.regards_proposal) }      
     end
   end
 end

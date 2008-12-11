@@ -1,16 +1,21 @@
-<h1>Editing comment</h1>
+<table width="90%">
+	
+<% form_for @comment do |f| %>
 
-<% form_for(@comment) do |f| %>
-  <%= f.error_messages %>
+	<tr>
+		<td>Din kommentar:</td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :text,:cols=>60,:rows=>4 %></td>
+	</tr>
 
-  <p>
-    <%= f.label :text %><br />
-    <%= f.text_field :text %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+	<tr>
+		<td align="right">
+			<%= f.submit "Oppdater" %>
+		</td>
+	</tr>
 <% end %>
+</table>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Tilbake', @comment.regards_proposal %>
+
