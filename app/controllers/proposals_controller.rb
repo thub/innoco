@@ -53,9 +53,15 @@ class ProposalsController < ApplicationController
       redirect_to proposals_path
       return
     end
+    
+    original_customer_requirement = @proposal.customer_requirement
+    original_suggested_solution = @proposal.suggested_solution
 
     respond_to do |format|
       if @proposal.update_attributes(params[:proposal])
+        if @proposal.customer_requirement != original_customer_requirement || @proposal.suggested_solution != original_suggested_solution
+          @proposal.update_attribute(:modified_at,Time.now)
+        end
         flash[:notice] = 'Ditt bidrag ble oppdatert.'
         format.html { redirect_to(@proposal) }
       else

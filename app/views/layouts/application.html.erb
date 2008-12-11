@@ -16,25 +16,17 @@
 
 		<div id="content">
 
-		
-
 			<div id="menu">
 				<% if user_logged_in? %>
-				<p>You are logged in with email <%= current_user.email %></p>
-				<p>The application will remember you even if you close the browser. If you are sharing this computer please click logout below after you are done.</p>
+				<p>Du er logget inn med epost <%= current_user.email %></p>
+				<p>Applikasjonen vil huske deg selv om du lukker dette vinduet. Dersom deler denne maskinen med andre så vennligst klikk logout når du er ferdig.</p>
 				<%= link_to 'Logout', logout_url %>
 				<% end %>	
 			</div>
 
 
 			<div id="stuff">
-
 				<p style="color: green"><%= flash[:notice] %></p>
-
-				
-
-
-
 				<%= yield  %>
 			</div>
 		</div>

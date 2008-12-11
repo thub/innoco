@@ -32,5 +32,5 @@ ActionMailer::Base.sendmail_settings = {
 :arguments      => '-i -t'
 }
 
-SITE = "http://auth.thubhub.com"
+SITE = "http://innoco.thubhub.com"
 TESTSERVER = false

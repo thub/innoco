@@ -3,6 +3,7 @@ class Proposal < ActiveRecord::Base
   
   has_many :comments,
   :foreign_key => 'regards_proposal_id',
-  :class_name => 'Comment'
+  :class_name => 'Comment',
+  :dependent => :destroy
   
 end

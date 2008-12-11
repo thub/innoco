@@ -5,7 +5,13 @@
 	
 <p>
 	Lagt inn <%=l @proposal.created_at,:format => 'short' %>
+	<% if @proposal.modified_at %>
+	<br/>
+		<b>Oppdatert <%=l @proposal.modified_at,:format => 'short' %></b>
+	<%end%>
 </p>
+
+
 
 <table width="95%">
 	
@@ -19,7 +25,7 @@
 	</tr>
 
 	<tr>
-		<td>Din løsning:</td>
+		<td>Forslag til løsning:</td>
 	</tr>
 	<tr bgcolor="white">		
 		<td>
@@ -29,7 +35,10 @@
 
 	<tr>
 		<td align="right">
-			<%= link_to 'Endre', edit_proposal_path(@proposal) %>		
+			<% if is_owner(@proposal,current_user) %>
+			<%= link_to 'Endre', edit_proposal_path(@proposal) %>	
+			<%= link_to 'Slett', @proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
+			<%end%>
 		</td>
 	</tr>
 	<tr>
@@ -49,7 +58,14 @@
 </tr>
 	
   <tr>
-	<td valign="top">Fra: <b><%=h comment.owner.email %></b> registrert <%=l comment.created_at,:format => 'short' %></td>
+	<td valign="top">
+		Fra: <b><%=h comment.owner.email %></b> registrert <%=l comment.created_at,:format => 'short' %> 
+		<% if comment.modified_at %>
+		<br/>
+			<b>Oppdatert <%=l comment.modified_at,:format => 'short' %></b>
+		<%end%>
+	
+	</td>
 	<td valign="top" align="right">
 	<% if is_owner(comment,current_user) %>
     	<%= link_to 'Endre', edit_comment_path(comment) %>

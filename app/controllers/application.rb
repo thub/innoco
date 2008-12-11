@@ -27,15 +27,15 @@ class ApplicationController < ActionController::Base
         set_token_in_session
         redirect_to :controller=>"Proposals", :action=>"index" 
       else
-        flash[:notice] = "You appear to be using an old entry link. Fetch a new one by entering your email below"
-        redirect_to :controller=>"Users", :action=>"new"
+        flash[:notice] = "Du bruker tilsynelatende en gammel link for å logge deg på. Du kan motta en ny link ved å legge inn din epostaddresse under"        
+        redirect_to welcome_path
       end
       
       return
     elsif token_is_in_session?
       # do nothing
     else
-      redirect_to :controller=>"Users", :action=>"new" 
+      redirect_to welcome_path 
       return
     end
   end

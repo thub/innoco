@@ -15,6 +15,8 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/leave', :controller => 'users', :action => 'logout'
   
   map.hello '/hello', :controller => 'application', :action => 'hello'
+  map.welcome '/welcome', :controller => 'site', :action => 'welcome'
+  
   
   
   

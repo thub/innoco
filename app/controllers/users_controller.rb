@@ -10,10 +10,6 @@ class UsersController < ApplicationController
     
     @user = User.find(params[:id])
   end
-
-  def new
-    @user = User.new
-  end
   
   def create
     @user = User.new(params[:user])
@@ -25,14 +21,14 @@ class UsersController < ApplicationController
       existing_user.token = token
       existing_user.save
       send_token_email_to_existing_user existing_user
-      flash[:notice] = "Email with entry link was successfully sent to #{existing_user.email}"
+      flash[:notice] = "Epost med lenke for å logge seg inn er sendt til #{existing_user.email}"
       redirect_to (existing_user)
       return
     else
       @user.token = token
       @user.save
       send_token_email_to_new_user @user
-      flash[:notice] = "Email with entry link was successfully sent to #{@user.email}"
+      flash[:notice] = "Epost med lenke for å logge seg inn er sendt til #{@user.email}"
       redirect_to (@user)
       return
     end
