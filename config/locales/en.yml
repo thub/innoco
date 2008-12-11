@@ -4,4 +4,7 @@
 en:
   hello: "Hello world"
   hello_flash: Hello Flash     
+  get_new_token: "To access the application again you will need to use the entry link you received by email. Alternatively you can request a new entry link from the login page."
+  logged_out: "You are now logged out."
+  login_page: "To login page"
   

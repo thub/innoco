@@ -7,23 +7,23 @@
 	Lagt inn <%=l @proposal.created_at,:format => 'short' %>
 </p>
 
-<table width="60%">
+<table width="95%">
 	
 	<tr>
 		<td>Kundens behov:</td>
 	</tr>
 	<tr>
-		<td>
-			<pre><%= word_wrap @proposal.customer_requirement, 40 %></pre>
+		<td bgcolor="white">
+			<pre><%= h word_wrap @proposal.customer_requirement, 60 %></pre>
 		</td>
 	</tr>
 
 	<tr>
 		<td>Din løsning:</td>
 	</tr>
-	<tr>		
+	<tr bgcolor="white">		
 		<td>
-			<pre><%= word_wrap @proposal.suggested_solution, 40 %></pre>
+			<pre><%= h word_wrap @proposal.suggested_solution, 60 %></pre>
 		</td>
 	</tr>
 
@@ -32,8 +32,34 @@
 			<%= link_to 'Endre', edit_proposal_path(@proposal) %>		
 		</td>
 	</tr>
+	<tr>
+		<td colspan="2">
+			<hr/>
+		</td>
+	</tr>
+</table>
+
+<h2> Kommentarer </h2>
+
+<table width="90%">
+	
+<% form_for @comment, :url=>add_comment_path(@proposal) do |f| %>
+
+	<tr>
+		<td>Din kommentar:</td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :text,:cols=>60,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td align="right">
+			<%= f.submit "Legg til" %>
+		</td>
+	</tr>
+<% end %>
 </table>
 
 <br/>
-<br/>
 <%= link_to 'Tilbake', proposals_path %>
+<br/>

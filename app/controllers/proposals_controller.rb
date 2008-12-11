@@ -12,7 +12,7 @@ class ProposalsController < ApplicationController
 
   def show
     @proposal = Proposal.find(params[:id])
-
+    @comment = Comment.new
     respond_to do |format|
       format.html
     end

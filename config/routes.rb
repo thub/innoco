@@ -5,13 +5,17 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :proposals
 
   map.resources :users
+  map.resources :comments
+  
   map.root :controller => "proposals", :action => 'index'
   
+  map.add_comment '/proposal/:regards_proposal_id/comment/new', :controller=>'comments', :action=>'create'
   
   map.enter '/enter/:token', :controller => 'proposals', :action => 'index'
   map.logout '/leave', :controller => 'users', :action => 'logout'
   
   map.hello '/hello', :controller => 'application', :action => 'hello'
+  
   
   
 

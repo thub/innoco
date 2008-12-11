@@ -116,6 +116,15 @@ width: 800px;
 height: 50px;
 }
 
+P.dashed
+{
+    width: 200px;
+	border-bottom: dashed 2px #AFA162;    
+    clear: both;
+	/*overflow:auto;*/
+}
+
+
 P.preElement
 {
     width: 200px;
@@ -126,5 +135,8 @@ P.preElement
 	/*overflow:auto;*/
 }
 
-
+table {
+	margin: 0;
+	padding: 0;
+}
 

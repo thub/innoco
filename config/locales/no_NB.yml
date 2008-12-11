@@ -95,3 +95,7 @@
         even: "må være partall"
       # models:
       # attributes:
+
+  get_new_token: "For å få tilgang til siden igjen må du bruke lenken du tidligere mottok i en epost. Dersom du ikke har denne kan du be om en ny lenke fra login siden."
+  logged_out: "Du har nå logget ut."
+  login_page: "Til login siden"
