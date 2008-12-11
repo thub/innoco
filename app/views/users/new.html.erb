@@ -1,0 +1,15 @@
+Please enter your email address. You will receive an email from us with a link that you can use to view the messages.
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+    <%= f.submit "Send" %>
+  </p>
+
+<br/>
+
+
+<% end %>

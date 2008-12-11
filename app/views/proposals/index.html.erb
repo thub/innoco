@@ -1,0 +1,66 @@
+<h2> Nye bidrag </h2>
+
+<table width="60%">
+	
+<% form_for(@proposal) do |f| %>
+	<%= f.error_messages %>
+	<tr>
+		<td>Kundens behov </td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :customer_requirement,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td>Din løsning</td>
+	</tr>
+	<tr>
+		
+		<td><%= f.text_area :suggested_solution,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td align="right">
+			<%= f.submit "Send" %>
+		</td>
+	</tr>
+<% end %>
+</table>
+<table width="60%">
+
+
+	<% for proposal in @proposals %>
+	<tr>
+		<td>
+			Bidrag #<%=h proposal.id%> fra <%=h proposal.owner.email %>
+		</td>
+		<td align="right"><%=l proposal.created_at,:format => 'short' %></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Behov: <%= truncate proposal.customer_requirement, 40 %> <br/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Løsning: <%= truncate proposal.suggested_solution, 40 %>
+		</td>
+	</tr>	
+
+	<% if is_owner(proposal,current_user) %>
+	<tr>
+		<td align="right" colspan="2">
+			<%= link_to 'Vis', proposal_path(proposal) %>
+			<%= link_to 'Endre', edit_proposal_path(proposal) %>
+			<%= link_to 'Slett', proposal, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+
+
+	<% end %>
+</table>
+
+<br />
+
+

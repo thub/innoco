@@ -1,0 +1,30 @@
+<h1>Editering av bidrag</h1>
+
+<table>
+	
+<% form_for(@proposal) do |f| %>
+	<%= f.error_messages %>
+	<tr>
+		<td>Kundens behov </td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :customer_requirement,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td>Din løsning</td>
+	</tr>
+	<tr>
+		
+		<td><%= f.text_area :suggested_solution,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td align="right">
+			<%= f.submit "Oppdater" %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+<%= link_to 'Tilbake', proposals_path %>

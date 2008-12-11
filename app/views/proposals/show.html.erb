@@ -1,0 +1,39 @@
+
+<h2>
+	Bidrag #<%=h @proposal.id%> fra <%=h @proposal.owner.email %>
+</h2>
+	
+<p>
+	Lagt inn <%=l @proposal.created_at,:format => 'short' %>
+</p>
+
+<table width="60%">
+	
+	<tr>
+		<td>Kundens behov:</td>
+	</tr>
+	<tr>
+		<td>
+			<pre><%= word_wrap @proposal.customer_requirement, 40 %></pre>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Din løsning:</td>
+	</tr>
+	<tr>		
+		<td>
+			<pre><%= word_wrap @proposal.suggested_solution, 40 %></pre>
+		</td>
+	</tr>
+
+	<tr>
+		<td align="right">
+			<%= link_to 'Endre', edit_proposal_path(@proposal) %>		
+		</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+<%= link_to 'Tilbake', proposals_path %>
