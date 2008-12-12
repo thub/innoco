@@ -14,7 +14,7 @@ class ProposalsController < ApplicationController
 
   def show
     @proposal = Proposal.find(params[:id])
-    @comments = Comment.paginate :conditions => ['regards_proposal_id = ?',@proposal.id], :order => 'id desc', :page => params[:page], :per_page =>10
+    @comments = Comment.paginate :conditions => ['regards_proposal_id = ?',@proposal.id], :order => 'id', :page => params[:page], :per_page =>10
     @comment = Comment.new
     respond_to do |format|
       format.html
