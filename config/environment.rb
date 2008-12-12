@@ -59,6 +59,9 @@ Rails::Initializer.run do |config|
   config.gem 'locale'
   config.gem 'locale_rails'
   
+  config.gem 'mislav-will_paginate', :version => '~> 2.2.3', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  
+  
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

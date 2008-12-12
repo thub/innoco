@@ -1,3 +1,33 @@
+<h2> Ditt bidrag </h2>
+
+
+<table width="90%">
+	
+<% form_for(@proposal) do |f| %>
+	<%= f.error_messages %>
+	<tr>
+		<td>Kundens behov </td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td>Din løsning</td>
+	</tr>
+	<tr>
+		
+		<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
+	</tr>
+
+	<tr>
+		<td align="right">
+			<%= f.submit "Send" %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
 <h2> Nye bidrag </h2>
 
 
@@ -33,6 +63,7 @@
 			
 		</td>
 	</tr>
+	
 	<tr>
 		<td colspan="2">
 			<hr/>
@@ -41,37 +72,14 @@
 
 
 	<% end %>
-</table>
-
-<h2> Ditt bidrag </h2>
-
-
-<table width="90%">
-	
-<% form_for(@proposal) do |f| %>
-	<%= f.error_messages %>
 	<tr>
-		<td>Kundens behov </td>
-	</tr>
-	<tr>
-		<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
-	</tr>
-
-	<tr>
-		<td>Din løsning</td>
-	</tr>
-	<tr>
-		
-		<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
-	</tr>
-
-	<tr>
-		<td align="right">
-			<%= f.submit "Send" %>
+		<td colspan="2" align="center">
+			  <%= will_paginate @proposals %>
 		</td>
 	</tr>
-<% end %>
 </table>
+
+
 
 <br />
 

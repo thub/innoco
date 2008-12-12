@@ -52,7 +52,7 @@
 
 <table width="90%">
 
-<% for comment in @proposal.comments %>
+<% for comment in @comments %>
 <tr>
 	<td colspan="2"><p class="dashed"></p></td>
 </tr>
@@ -77,7 +77,9 @@
 	<td valign="top" colspan="2"><pre><%= word_wrap comment.text, 60 %></pre></td>
   </tr>
 <% end %>
-
+<tr>
+	<td colspan="2" align="center"><%= will_paginate @comments %></td>
+</tr>
 
 </table>
 <table width="90%">

@@ -1,7 +1,9 @@
 class ProposalsController < ApplicationController
 
+
   def index
-    @proposals = Proposal.find(:all)
+    #@proposals = Proposal.find(:all,:order=>'id desc')
+    @proposals = Proposal.paginate :order => 'id desc', :page => params[:page], :per_page =>10
     @proposal = Proposal.new
 
     respond_to do |format|
@@ -12,6 +14,7 @@ class ProposalsController < ApplicationController
 
   def show
     @proposal = Proposal.find(params[:id])
+    @comments = Comment.paginate :conditions => ['regards_proposal_id = ?',@proposal.id], :order => 'id desc', :page => params[:page], :per_page =>10
     @comment = Comment.new
     respond_to do |format|
       format.html
@@ -38,7 +41,7 @@ class ProposalsController < ApplicationController
     respond_to do |format|
       if @proposal.save
         flash[:notice] = 'Ditt bidrag ble registrert.'
-        format.html { redirect_to(@proposal) }
+        format.html { redirect_to proposals_path }
       else
         format.html { render :action => "new" }
       end
