@@ -1,9 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   customer_requirement: MyString
   suggested_solution: MyString
 
 two:
+  id: 2
   customer_requirement: MyString
   suggested_solution: MyString

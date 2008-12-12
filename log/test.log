@@ -1,0 +1,2106 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:17:13) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 19) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:17:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#index (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#new (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#show (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:17:13) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `proposals` [0m
+
+
+Processing ProposalsController#create (for 0.0.0.0 at 2008-12-12 10:17:13) [POST]
+  Parameters: {"proposal"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/proposals?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `proposals` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `proposals` [0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#destroy (for 0.0.0.0 at 2008-12-12 10:17:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/proposals/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `proposals` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#edit (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProposalsController#index (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProposalsController#new (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/proposals/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#show (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#update (for 0.0.0.0 at 2008-12-12 10:17:13) [PUT]
+  Parameters: {"id"=>"953125641", "proposal"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-12-12 10:17:13) [POST]
+  Parameters: {"user"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 09:17:13', 'a481f234caa602ede423a363a29e40462d019b0fd882485c87c141c47922ca919f806cfd43f8471f3a7c5eb4c0fbb7ef4e92', NULL, '2008-12-12 09:17:13')[0m
+Sending token to new user a481f234caa602ede423a363a29e40462d019b0fd882485c87c141c47922ca919f806cfd43f8471f3a7c5eb4c0fbb7ef4e92 to 
+Sent mail to 
+
+Date: Fri, 12 Dec 2008 10:17:13 +0100
+From: Do not reply <bounce@thubhub.com>
+Subject: =?utf-8?Q?=5bhttp=3a=2f=2flocalhost=3a=33=30=30=30=5d_Lenke_til_=c3=a5_logge_seg_inn_med?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hei
+
+Dette er lenken du kan bruke for å logge deg på applikasjonen som  
+
+http://localhost:3000/enter/a481f234caa602ede423a363a29e40462d019b0fd882485c87c141c47922ca919f806cfd43f8471f3a7c5eb4c0fbb7ef4e92
+
+Regards
+thubhub.com
+
+
+Redirected to #<User:0x2245f70>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/users?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2008-12-12 10:17:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2008-12-12 10:17:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2008-12-12 10:17:13) [PUT]
+  Parameters: {"user"=>{}, "id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/users/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:37:30) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 60) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:37:30) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:37:30) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#index (for 0.0.0.0 at 2008-12-12 10:37:30) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#new (for 0.0.0.0 at 2008-12-12 10:37:30) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#show (for 0.0.0.0 at 2008-12-12 10:37:30) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:37:30) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:38:10) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:38:10) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:38:10) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#index (for 0.0.0.0 at 2008-12-12 10:38:10) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#new (for 0.0.0.0 at 2008-12-12 10:38:10) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#show (for 0.0.0.0 at 2008-12-12 10:38:10) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:38:10) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:39:18) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 16) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:39:18) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:39:18) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#index (for 0.0.0.0 at 2008-12-12 10:39:18) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#new (for 0.0.0.0 at 2008-12-12 10:39:18) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#show (for 0.0.0.0 at 2008-12-12 10:39:18) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:39:18) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:40:25) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 43) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:40:25) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:40:25) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#index (for 0.0.0.0 at 2008-12-12 10:40:25) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#new (for 0.0.0.0 at 2008-12-12 10:40:25) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#show (for 0.0.0.0 at 2008-12-12 10:40:25) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:40:25) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:44:41) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 130) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:44:41) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:44:41) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:44:41) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:44:47) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 17) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:44:47) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:44:47) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:44:47) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:46:29) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 22) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:46:29) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:46:29) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `proposals` [0m
+
+
+Processing ProposalsController#create (for 0.0.0.0 at 2008-12-12 10:46:29) [POST]
+  Parameters: {"proposal"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `proposals` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `proposals` [0m
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#destroy (for 0.0.0.0 at 2008-12-12 10:46:29) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 1) | 302 Found [http://test.host/proposals/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `proposals` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#edit (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/953125641/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProposalsController#index (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProposalsController#new (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#show (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 953125641) [0m
+
+
+Processing ProposalsController#update (for 0.0.0.0 at 2008-12-12 10:46:29) [PUT]
+  Parameters: {"id"=>"953125641", "proposal"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/proposals/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-12-12 10:46:29) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 09:46:29', '61be7ce8be2a2af3f1218be0741dea981c7aa36be3a321db25e1fea28ae4de3b21745913b68df0e077b6329964a34c58441b', NULL, '2008-12-12 09:46:29')[0m
+Sending token to new user 61be7ce8be2a2af3f1218be0741dea981c7aa36be3a321db25e1fea28ae4de3b21745913b68df0e077b6329964a34c58441b to 
+Sent mail to 
+
+Date: Fri, 12 Dec 2008 10:46:29 +0100
+From: Do not reply <bounce@thubhub.com>
+Subject: =?utf-8?Q?=5bhttp=3a=2f=2flocalhost=3a=33=30=30=30=5d_Lenke_til_=c3=a5_logge_seg_inn_med?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hei
+
+Dette er lenken du kan bruke for å logge deg på applikasjonen som  
+
+http://localhost:3000/enter/61be7ce8be2a2af3f1218be0741dea981c7aa36be3a321db25e1fea28ae4de3b21745913b68df0e077b6329964a34c58441b
+
+Regards
+thubhub.com
+
+
+Redirected to #<User:0x228051c>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/users?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2008-12-12 10:46:29) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 2) | 302 Found [http://test.host/users/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/953125641/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2008-12-12 10:46:29) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2008-12-12 10:46:29) [PUT]
+  Parameters: {"user"=>{}, "id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/users/953125641?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:52:18) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 22) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:52:18) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:52:18) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:52:18) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:54:26) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 84) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2008-12-12 10:54:26) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2008-12-12 10:54:26) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 953125641) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2008-12-12 10:54:26) [PUT]
+  Parameters: {"id"=>"953125641", "comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/comments/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:58:02) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 132) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 10:58:31) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:41:22) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 23) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:42:06) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 200) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:42:59) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:52:21) [POST]
+  Parameters: {"comment"=>{}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 29) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:54:23) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 60) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:58:27) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 26) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 12:59:24) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 22) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:01:01) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 85) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:01:43) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:03:22) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 21) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:04:26) [POST]
+  Parameters: {"comment"=>{"text"=>"test", "id"=>"1"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 59) | 302 Found [http://test.host/comments?comment%5Bid%5D=1&comment%5Btext%5D=test]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:07:09) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 32) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:08:07) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:11:38', '123', 'tjhubertz@gmail.com', '2008-12-12 12:11:38')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:11:38) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 65) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:12:37', '123', 'tjhubertz@gmail.com', '2008-12-12 12:12:37')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:12:37) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 23) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:12:46', '123', 'tjhubertz@gmail.com', '2008-12-12 12:12:46')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:12:46) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 16) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:14:17', '123', 'tjhubertz@gmail.com', '2008-12-12 12:14:17')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:14:17) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 57) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:14:45', '123', 'tjhubertz@gmail.com', '2008-12-12 12:14:45')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:14:45) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:15:02', '123', 'tjhubertz@gmail.com', '2008-12-12 12:15:02')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:15:02) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 21) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `token`, `email`, `created_at`) VALUES('2008-12-12 12:15:23', '123', 'tjhubertz@gmail.com', '2008-12-12 12:15:23')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:15:23) [POST]
+  Parameters: {"comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 15) | 302 Found [http://test.host/comments?comment%5Btext%5D=test]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:30:28) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 51) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:31:09) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 24) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:31:22) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 22) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:32:44) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 56) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:33:19) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 22) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:34:01) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:35:06) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 80) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:36:14) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 20) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:36:32) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 22) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:37:07) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 241) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:38:50) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 21) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:39:03) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 19) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:40:27) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 94) | 302 Found [http://test.host/comments?comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:42:48) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test", "regards_proposal_id"=>1}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 23) | 302 Found [http://test.host/comments?comment%5Bregards_proposal_id%5D=1&comment%5Btext%5D=test&token=123]
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:43:34) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test", "regards_proposal_id"=>1}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 23) | 302 Found [http://test.host/comments?comment%5Bregards_proposal_id%5D=1&comment%5Btext%5D=test&token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:43:51) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test", "regards_proposal_id"=>1}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 167) | 302 Found [http://test.host/comments?comment%5Bregards_proposal_id%5D=1&comment%5Btext%5D=test&token=123]
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 13:44:45) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test", "regards_proposal_id"=>1}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 28) | 302 Found [http://test.host/comments?comment%5Bregards_proposal_id%5D=1&comment%5Btext%5D=test&token=123]
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:09:35) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 23) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:09:35) [POST]
+  Parameters: {"token"=>"123", "comment"=>{"text"=>"test", "regards_proposal_id"=>1}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:10:18) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 51) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:10:18) [POST]
+  Parameters: {"comment"=>{"text"=>"test", "regards_proposal_id"=>1}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:12:33) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 29) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:12:33) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:12:33', 'test', NULL, 953125641, 1, '2008-12-12 13:12:33')[0m
+Redirected to #<Proposal:0x236e6a4>
+Completed in 9ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:13:23) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 22) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:13:23) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:13:23', 'test', NULL, 953125641, 1, '2008-12-12 13:13:23')[0m
+Redirected to #<Proposal:0x236e6a4>
+Completed in 7ms (DB: 0) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:14:16) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 63) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:14:16) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:14:16', 'test', NULL, 953125641, 1, '2008-12-12 13:14:16')[0m
+Redirected to #<Proposal:0x236e6a4>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:14:55) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 27) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:14:55) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:14:55', 'test', NULL, 953125641, 1, '2008-12-12 13:14:55')[0m
+Redirected to #<Proposal:0x236e4ec>
+Completed in 7ms (DB: 0) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:15:29) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 23) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:15:29) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:15:29', 'test', NULL, 953125641, 1, '2008-12-12 13:15:29')[0m
+Redirected to #<Proposal:0x236e4ec>
+Completed in 10ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test2') LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:16:27) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+Redirected to /welcome
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 84) | 302 Found [http://test.host/proposal/1/comment/new?comment%5Btext%5D=test]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:16:40) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 20) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:16:40) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:16:40', 'test', NULL, 953125641, 1, '2008-12-12 13:16:40')[0m
+Redirected to #<Proposal:0x236ca34>
+Completed in 6ms (DB: 0) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:18:33) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 27) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:18:33) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:18:33', 'test', NULL, 953125641, 1, '2008-12-12 13:18:33')[0m
+Redirected to #<Proposal:0x2389814>
+Completed in 9ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:18:33) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 2) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:18:33) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:18:33', 'test', NULL, 953125641, 1, '2008-12-12 13:18:33')[0m
+Redirected to #<Proposal:0x235f640>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:18:59) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 23) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:18:59) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:18:59', 'test', NULL, 953125641, 1, '2008-12-12 13:18:59')[0m
+Redirected to #<Proposal:0x236d844>
+Completed in 9ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:18:59) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:18:59) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:18:59', 'test', NULL, 953125641, 1, '2008-12-12 13:18:59')[0m
+Redirected to #<Proposal:0x23434f4>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:19:32) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 30) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:19:32) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:19:32', 'test', NULL, 953125641, 1, '2008-12-12 13:19:32')[0m
+Redirected to #<Proposal:0x236d664>
+Completed in 6ms (DB: 0) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (36.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:19:32) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 39) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:19:32) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:19:32', 'test', NULL, 953125641, 1, '2008-12-12 13:19:32')[0m
+Redirected to #<Proposal:0x2343314>
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:21:17) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 20) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:21:17) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:21:17', 'test', NULL, 953125641, 1, '2008-12-12 13:21:17')[0m
+Redirected to #<Proposal:0x2374374>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:21:17) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:21:17) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:21:17', 'test', NULL, 953125641, 1, '2008-12-12 13:21:17')[0m
+Redirected to #<Proposal:0x2349c3c>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:21:29) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 21) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:21:29) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:21:29', 'test', NULL, 953125641, 1, '2008-12-12 13:21:29')[0m
+Redirected to #<Proposal:0x2372a24>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:21:29) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:21:29) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:21:30', 'test', NULL, 953125641, 1, '2008-12-12 13:21:30')[0m
+Redirected to #<Proposal:0x23482ec>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:21:44) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 121) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:21:44) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:21:44', 'test', NULL, 953125641, 1, '2008-12-12 13:21:44')[0m
+Redirected to #<Proposal:0x2378e74>
+Completed in 9ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:21:44) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:21:44) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:21:44', 'test', NULL, 953125641, 1, '2008-12-12 13:21:44')[0m
+Redirected to #<Proposal:0x2351a68>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:22:41) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 20) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:22:41) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test"}}
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:22:41', 'test', NULL, 953125641, 1, '2008-12-12 13:22:41')[0m
+Redirected to #<Proposal:0x2378e74>
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:22:41) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to actionindexcontrollerProposals
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:22:41) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.1ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:22:41', 'test', NULL, 953125641, 1, '2008-12-12 13:22:41')[0m
+Redirected to #<Proposal:0x2351a68>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:23:40) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 24) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:23:40) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:23:40', 'test', NULL, 953125641, 1, '2008-12-12 13:23:40')[0m
+Redirected to #<Proposal:0x2378e74>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:25:25) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 21) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:25:25) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:25:25', 'test', NULL, 953125641, 1, '2008-12-12 13:25:25')[0m
+Redirected to #<Proposal:0x2378e74>
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:25:31) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 3ms (DB: 21) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:25:31) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:25:31', 'test', NULL, 953125641, 1, '2008-12-12 13:25:31')[0m
+Redirected to #<Proposal:0x20c8120>
+Completed in 55ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#/enter (for 0.0.0.0 at 2008-12-12 14:25:55) [POST]
+  Parameters: {"token"=>"123"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+Redirected to controllerProposalsactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 2ms (DB: 15) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2008-12-12 14:25:55) [POST]
+  Parameters: {"regards_proposal_id"=>"1", "comment"=>{"text"=>"test", "id"=>"1"}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProposal Load (0.3ms)[0m   [0mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '123') LIMIT 1[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO `comments` (`updated_at`, `text`, `modified_at`, `owner_id`, `regards_proposal_id`, `created_at`) VALUES('2008-12-12 13:25:55', 'test', NULL, 953125641, 1, '2008-12-12 13:25:55')[0m
+Redirected to #<Proposal:0x20c7d88>
+Completed in 48ms (DB: 1) | 302 Found [http://test.host/comments/%2Fenter?token=123]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`text` = 'test') LIMIT 1[0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM `proposals` WHERE (`proposals`.`id` = 1) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
