@@ -4,8 +4,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     unless @comment.owner.id == current_user.id
-      flash[:notice] = 'Hey stop it!'
-      redirect_to @comment.regards_proposal
+      redirect_to intruder_path
       return
     end
 
@@ -32,8 +31,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     unless @comment.owner.id == current_user.id
-      flash[:notice] = 'Hey stop it!'
-      redirect_to @comment.proposal
+      redirect_to intruder_path
       return
     end
     
@@ -55,8 +53,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     unless @comment.owner.id == current_user.id
-      flash[:notice] = 'Hey stop it!'
-      redirect_to @comment.proposal
+      redirect_to intruder_path
       return
     end
     

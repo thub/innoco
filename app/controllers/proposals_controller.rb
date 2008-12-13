@@ -26,8 +26,7 @@ class ProposalsController < ApplicationController
   def edit
     @proposal = Proposal.find(params[:id])
     unless @proposal.owner.id == current_user.id
-      flash[:notice] = 'Hey stop it!'
-      redirect_to proposals_path
+      redirect_to intruder_path
       return
     end
   end
@@ -52,8 +51,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
 
     unless @proposal.owner.id == current_user.id
-      flash[:notice] = 'Hey stop it!'
-      redirect_to proposals_path
+      redirect_to intruder_path
       return
     end
     
@@ -78,8 +76,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
 
     unless @proposal.owner.id == current_user.id
-      flash[:notice] = 'Hey stop it!'
-      redirect_to proposals_path
+      redirect_to intruder_path
       return
     end
 

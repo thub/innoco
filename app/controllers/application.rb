@@ -18,6 +18,11 @@ class ApplicationController < ActionController::Base
      render :text => I18n.localize( Time.now, :format => :short )
      return
    end
+   
+   def intruder
+      render :text => "Du er logget på som #{current_user.email} og har utført en ulovlig operasjon"
+      return
+    end
   
   
   def check_token

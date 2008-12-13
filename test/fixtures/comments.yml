@@ -2,6 +2,10 @@
 
 one:
   text: one
+  owner_id: 1
+  regards_proposal_id: 1
 
 two:
   text: two
+  owner_id: 2
+  regards_proposal_id: 2
