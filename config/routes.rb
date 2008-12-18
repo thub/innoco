@@ -11,12 +11,18 @@ ActionController::Routing::Routes.draw do |map|
   
   map.add_comment '/proposal/:regards_proposal_id/comment/new', :controller=>'comments', :action=>'create'
   
-  map.enter '/enter/:token', :controller => 'proposals', :action => 'index'
+  map.enter '/enter/:token', :controller => 'application'
   map.logout '/leave', :controller => 'users', :action => 'logout'
+  
+  map.your_proposals '/your_proposals', :controller => 'users', :action => 'show_proposals'
+  map.your_comments '/your_comments', :controller => 'users', :action => 'show_comments'
+  
+  
   
   map.hello '/hello', :controller => 'application', :action => 'hello'
   map.intruder '/intruder', :controller => 'application', :action => 'intruder'
-  map.welcome '/welcome', :controller => 'site', :action => 'welcome'
+  map.welcome '/welcome', :controller => 'users', :action => 'new'
+  map.set_company '/set_company/:company_id', :controller => 'users', :action => 'set_company'
   
   
   

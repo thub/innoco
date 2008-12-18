@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081211183710) do
+ActiveRecord::Schema.define(:version => 20081215190338) do
 
   create_table "comments", :force => true do |t|
     t.string   "text"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20081211183710) do
     t.datetime "modified_at"
   end
 
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "proposals", :force => true do |t|
     t.string   "customer_requirement"
     t.string   "suggested_solution"
@@ -27,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20081211183710) do
     t.datetime "updated_at"
     t.integer  "owner_id"
     t.datetime "modified_at"
+    t.integer  "company_id"
   end
 
   create_table "users", :force => true do |t|
@@ -34,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20081211183710) do
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "company_id"
+    t.boolean  "admin"
   end
 
 end

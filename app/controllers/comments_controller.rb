@@ -16,14 +16,14 @@ class CommentsController < ApplicationController
     @comment.regards_proposal = @proposal  
     @comment.owner = current_user
 
-    respond_to do |format|
-      if @comment.save
-        flash[:notice] = 'Din kommentar ble registrert.'
-        format.html { redirect_to(@comment.regards_proposal) }
-      else
-        flash[:notice] = 'En feil oppstod. Kunne ikke registrere din kommentar'
-        format.html { redirect_to(@comment.regards_proposal)}
-      end
+    if @comment.save
+      flash[:notice] = 'Din kommentar ble registrert.'
+      redirect_to(@comment.regards_proposal)
+      return
+    else
+      flash[:notice] = 'En feil oppstod. Kunne ikke registrere din kommentar'
+      redirect_to(@comment.regards_proposal)
+      return
     end
   end
 
@@ -34,19 +34,18 @@ class CommentsController < ApplicationController
       redirect_to intruder_path
       return
     end
-    
+
     original_text = @comment.text
-    
-    respond_to do |format|
-      if @comment.update_attributes(params[:comment])
-        if @comment.text != original_text
-          @comment.update_attribute(:modified_at,Time.now)
-        end
-        flash[:notice] = 'Din kommentar ble oppdatert'
-        format.html { redirect_to(@comment.regards_proposal) }
-      else
-        format.html { render :action => "edit" }
+
+    if @comment.update_attributes(params[:comment])
+      if @comment.text != original_text
+        @comment.update_attribute(:modified_at,Time.now)
       end
+      flash[:notice] = 'Din kommentar ble oppdatert'
+      redirect_to(@comment.regards_proposal)
+      return
+    else
+      render :action => "edit"        
     end
   end
 
@@ -56,12 +55,11 @@ class CommentsController < ApplicationController
       redirect_to intruder_path
       return
     end
-    
+
     @comment.destroy
     flash[:notice] = 'Din kommentar ble slettet'
+    redirect_to(@comment.regards_proposal)
+    return
 
-    respond_to do |format|
-      format.html { redirect_to(@comment.regards_proposal) }      
-    end
   end
 end

@@ -3,7 +3,7 @@ module ApplicationHelper
   
   # TODO: this is a duplicate of application controller method. Should be refactored in some way
   def current_user
-     User.find_by_token(session[:token])
+     session[:current_user]
    end
   
   def user_logged_in?

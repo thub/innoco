@@ -26,35 +26,36 @@ class ApplicationController < ActionController::Base
   
   
   def check_token
+    logger.debug "in check token"
     if token_is_on_request?
       
       if token_matches_a_user?       
-        set_token_in_session
+        set_user_in_session
         redirect_to :controller=>"Proposals", :action=>"index" 
       else
         flash[:notice] = "Du bruker tilsynelatende en gammel link for å logge deg på. Du kan motta en ny link ved å legge inn din epostaddresse under"        
         redirect_to welcome_path
       end
-      
+        
       return
-    elsif token_is_in_session?
-      # do nothing
+    elsif user_is_in_session?
+      logger.debug "user in session #{current_user.email} connected to #{current_user.company.name}"
     else
       redirect_to welcome_path 
       return
     end
   end
   
-  def token_is_in_session?
-    session[:token]!=nil  
+  def user_is_in_session?
+    session[:current_user]!=nil  
   end
 
   def token_is_on_request?
     params[:token]!=nil
   end
   
-  def set_token_in_session
-    session[:token] = params[:token]
+  def set_user_in_session
+    session[:current_user] = User.find_by_token(params[:token])
   end      
   
   def token_matches_a_user?
@@ -62,15 +63,24 @@ class ApplicationController < ActionController::Base
   end
   
   def current_user
-    User.find_by_token(session[:token])
+       session[:current_user]
   end
   
   def user_logged_in?
-    current_user!=nil
+    #return current_user!=nil
+    return true
+  end
+  
+  def current_user_is_admin?
+    get_domain(current_user.email)=="innoco.no" || current_user.email=="hubertz.online.no"
+  end
+
+  def get_domain(email)
+    domain = email.match(/\@(.+)/)[1]
   end
   
   def logout
-    session[:token]=nil
+    session[:current_user]=nil
   end
 
   # See ActionController::RequestForgeryProtection for details

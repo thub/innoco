@@ -4,8 +4,10 @@ one:
   id: 1
   email: tjhubertz@gmail.com
   token: 123
+  company_id: 3
 
 two:
   id: 2
   email: hubertz@online.no
   token: 456
+  company_id: 2

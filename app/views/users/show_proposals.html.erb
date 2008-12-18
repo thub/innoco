@@ -1,0 +1,48 @@
+
+<h2> Dine bidrag </h2>
+<table width="90%">
+
+<% for proposal in @proposals %>
+<tr>
+	<td>
+		Bidrag #<%=h proposal.id%> fra <%=h proposal.owner.email %>
+	</td>
+	<td align="right"><%=l proposal.created_at,:format => 'short' %></td>
+</tr>
+<tr>
+	<td colspan="2">
+		Behov: <%= truncate proposal.customer_requirement, 40 %> <br/>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+		Løsning: <%= truncate proposal.suggested_solution, 40 %>
+	</td>
+</tr>	
+
+<tr>
+	<td>Antall kommentarer: <%=number_of_comments(proposal)%> </td>		
+	<td align="right" colspan="2">
+		<%= link_to 'Vis', proposal_path(proposal) %>
+		<% if is_owner(proposal,current_user) %>			
+			<%= link_to 'Endre', edit_proposal_path(proposal) %>
+			<%= link_to 'Slett', proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
+		<% end %>
+		
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2">
+		<hr/>
+	</td>
+</tr>
+
+
+<% end %>
+
+<tr>
+	<td colspan="2" align="center"><%= will_paginate @proposals %></td>
+</tr>
+
+</table>

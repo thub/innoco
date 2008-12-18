@@ -4,8 +4,12 @@ one:
   id: 1
   customer_requirement: MyString
   suggested_solution: MyString
+  company_id: 3
+  owner_id: 1
 
 two:
   id: 2
   customer_requirement: MyString
   suggested_solution: MyString
+  company_id: 3
+  owner_id: 1

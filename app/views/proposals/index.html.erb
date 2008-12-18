@@ -1,30 +1,32 @@
+
+
 <h2> Ditt bidrag </h2>
 
 
 <table width="90%">
-	
+
 <% form_for(@proposal) do |f| %>
-	<%= f.error_messages %>
-	<tr>
-		<td>Kundens behov </td>
-	</tr>
-	<tr>
-		<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
-	</tr>
+<%= f.error_messages %>
+<tr>
+	<td>Kundens behov </td>
+</tr>
+<tr>
+	<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
+</tr>
 
-	<tr>
-		<td>Din løsning</td>
-	</tr>
-	<tr>
-		
-		<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
-	</tr>
+<tr>
+	<td>Din løsning</td>
+</tr>
+<tr>
 
-	<tr>
-		<td align="right">
-			<%= f.submit "Send" %>
-		</td>
-	</tr>
+	<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
+</tr>
+
+<tr>
+	<td align="right">
+		<%= f.submit "Send" %>
+	</td>
+</tr>
 <% end %>
 </table>
 
@@ -43,12 +45,12 @@
 	</tr>
 	<tr>
 		<td colspan="2">
-			Behov: <%= truncate proposal.customer_requirement, 40 %> <br/>
+			Behov: <%= truncate proposal.customer_requirement, :length=>40 %> <br/>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			Løsning: <%= truncate proposal.suggested_solution, 40 %>
+			Løsning: <%= truncate proposal.suggested_solution, :length=>40 %>
 		</td>
 	</tr>	
 
@@ -57,13 +59,13 @@
 		<td align="right" colspan="2">
 			<%= link_to 'Vis', proposal_path(proposal) %>
 			<% if is_owner(proposal,current_user) %>			
-				<%= link_to 'Endre', edit_proposal_path(proposal) %>
-				<%= link_to 'Slett', proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
+			<%= link_to 'Endre', edit_proposal_path(proposal) %>
+			<%= link_to 'Slett', proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
 			<% end %>
-			
+
 		</td>
 	</tr>
-	
+
 	<tr>
 		<td colspan="2">
 			<hr/>
@@ -74,7 +76,7 @@
 	<% end %>
 	<tr>
 		<td colspan="2" align="center">
-			  <%= will_paginate @proposals %>
+			<%= will_paginate @proposals %>
 		</td>
 	</tr>
 </table>

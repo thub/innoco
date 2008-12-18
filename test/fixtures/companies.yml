@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: Eidsiva
+  domain: eidsiva.no
+
+two:
+  id: 2
+  name: Demo
+  domain: nil
+  
+three:
+  id: 3
+  name: The Gmail Company
+  domain: gmail.com

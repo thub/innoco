@@ -11,19 +11,18 @@ class CommentsControllerTest < ActionController::TestCase
     @controller = CommentsController.new
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
-
   end
 
   def login
-    @request.session[:token] = nil
+    @request.session[:current_user] = nil
     post '/enter',:token => '123'
-    assert_not_nil @request.session[:token]
+    assert_not_nil @request.session[:current_user]
   end
 
   def login_other_user
-    @request.session[:token] = nil
+    @request.session[:current_user] = nil
     post '/enter',:token => '456'
-    assert_not_nil @request.session[:token]
+    assert_not_nil @request.session[:current_user]
   end
 
   test "should create comment" do

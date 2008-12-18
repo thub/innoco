@@ -1,0 +1,37 @@
+<h2> Dine kommentarer </h2>
+
+<table width="90%">
+
+<% for comment in @comments %>
+<tr>
+	<td colspan="2"><p class="dashed"></p></td>
+</tr>
+	
+  <tr>
+	<td valign="top">
+		Gjelder bidrag #<%=h comment.regards_proposal.id%> fra <%=h comment.regards_proposal.owner.email %>
+		<br/>
+		Din kommentar registrert <%=l comment.created_at,:format => 'short' %> :
+		<% if comment.modified_at %>
+		<br/>
+			<b>Oppdatert <%=l comment.modified_at,:format => 'short' %></b>
+		<%end%>
+	
+	</td>
+	<td valign="top" align="right">
+	<% if is_owner(comment,current_user) %>
+		<%= link_to 'Vis bidrag', proposal_path(comment.regards_proposal) %>
+    	<%= link_to 'Endre', edit_comment_path(comment) %>
+    	<%= link_to 'Slett', comment, :confirm => 'Er du sikker på at du vil slette kommentaren?', :method => :delete %>
+	<% end %>
+	</td>
+  </tr>
+  <tr>
+	<td valign="top" colspan="2"><pre><%= word_wrap comment.text, 60 %></pre></td>
+  </tr>
+<% end %>
+<tr>
+	<td colspan="2" align="center"><%= will_paginate @comments %></td>
+</tr>
+
+</table>
