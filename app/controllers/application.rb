@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   
   before_filter :check_token
   
+  
   #def rescue_action_in_public(exception)
   #    render :text => "<html><body><p>doh!</p> <!--  #{exception}  --></body></html>"
   #end
@@ -83,6 +84,10 @@ class ApplicationController < ActionController::Base
     session[:current_user]=nil
   end
 
+  
+  
+  
+    
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '0e2c99506654cadd00f747e3b301d6e2'

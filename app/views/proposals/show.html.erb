@@ -20,7 +20,7 @@
 	</tr>
 	<tr>
 		<td bgcolor="white">
-			<pre><%= h word_wrap @proposal.customer_requirement, 60 %></pre>
+			<pre><%= h word_wrap(@proposal.customer_requirement, 60) %></pre>
 		</td>
 	</tr>
 
@@ -29,7 +29,7 @@
 	</tr>
 	<tr bgcolor="white">		
 		<td>
-			<pre><%= h word_wrap @proposal.suggested_solution, 60 %></pre>
+			<pre><%= h word_wrap(@proposal.suggested_solution, 60) %></pre>
 		</td>
 	</tr>
 

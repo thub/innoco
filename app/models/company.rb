@@ -8,4 +8,8 @@ class Company < ActiveRecord::Base
      :class_name => 'Proposal'
    
    #has_many :proposals , :through => :users
+   
+   
+   
+  
 end

@@ -1,16 +1,18 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+alpha_company:
   id: 1
-  name: Eidsiva
-  domain: eidsiva.no
+  name: 
+  domain: alpha.com
 
-two:
+
+beta_company:
   id: 2
+  name: 
+  domain: beta.com
+
+demo_company:
+  id: 3
   name: Demo
   domain: nil
   
-three:
-  id: 3
-  name: The Gmail Company
-  domain: gmail.com

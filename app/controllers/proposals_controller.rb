@@ -57,11 +57,18 @@ class ProposalsController < ApplicationController
       return
     end
 
-    orig_proposal = @proposal
+    orig_customer_requirement = @proposal.customer_requirement
+    orig_suggested_solution = @proposal.suggested_solution
+
     if @proposal.update_attributes(params[:proposal])     
-      if text_has_changed(orig_proposal,@proposal) 
+      logger.debug "modified at after"
+      logger.debug @proposal.modified_at
+      
+      unless (orig_customer_requirement.eql? @proposal.customer_requirement) && (orig_suggested_solution.eql? @proposal.suggested_solution)
+        logger.debug("setting modified at")
         @proposal.update_attribute(:modified_at,Time.now)
       end
+      
       flash[:notice] = 'Ditt bidrag ble oppdatert.'
       redirect_to(@proposal)
       return
@@ -70,9 +77,6 @@ class ProposalsController < ApplicationController
     end
   end
 
-  def text_has_changed(orig_proposal, new_proposal)
-     @proposal.customer_requirement == orig_proposal.customer_requirement && @proposal.suggested_solution == orig_proposal.suggested_solution    
-  end
 
   def destroy
     @proposal = Proposal.find(params[:id])

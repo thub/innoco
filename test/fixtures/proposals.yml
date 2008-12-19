@@ -1,15 +1,24 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+alpha_proposal:
   id: 1
-  customer_requirement: MyString
+  customer_requirement: Proposal for alpha company from alpha user
   suggested_solution: MyString
-  company_id: 3
+  company_id: 1
   owner_id: 1
 
-two:
+beta_proposal:
   id: 2
-  customer_requirement: MyString
+  customer_requirement: Proposal for beta company from beta user
+  suggested_solution: MyString
+  company_id: 2
+  owner_id: 2
+  
+demo_proposal:
+  id: 3
+  customer_requirement: Proposal for demo company from demo user
   suggested_solution: MyString
   company_id: 3
-  owner_id: 1
+  owner_id: 4
+
+    

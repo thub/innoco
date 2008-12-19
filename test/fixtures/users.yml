@@ -1,13 +1,26 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+alpha_user:
   id: 1
-  email: tjhubertz@gmail.com
+  email: someone@alpha.com
   token: 123
-  company_id: 3
+  company_id: 1
 
-two:
+beta_user:
   id: 2
-  email: hubertz@online.no
+  email: someone@beta.com
   token: 456
   company_id: 2
+    
+admin_user:
+  id: 3
+  email: someone@innoco.com
+  token: 789
+  company_id: 3
+  admin: 1
+
+demo_user:
+  id: 4
+  email: someone@somedomain.com
+  token: 100
+  company_id: 3
