@@ -19,6 +19,9 @@
 
 	</td>
 	<td valign="top" align="right">
+		<% if user_can_be_shown_proposal(current_user,comment.regards_proposal) %>									
+		<%= link_to 'Vis bidrag', proposal_path(comment.regards_proposal) %>
+		<% end %>
 
 		<% if user_can_edit_comment(current_user,comment) %>									
 		<%= link_to 'Endre', edit_comment_path(comment) %>
