@@ -1,48 +1,53 @@
+
 class UsersController < ApplicationController
+  
   skip_filter :check_token, :only =>[:new,:create]  
+
 
   def new
     @user = User.new
   end
+
 
   def show_proposals
     @user = current_user
     @proposals = current_user.proposals.paginate :order => 'id desc', :page => params[:page], :per_page =>10
   end
 
+
   def show_comments
     @user = current_user
     @comments = current_user.comments.paginate :order => 'id', :page => params[:page], :per_page =>10    
   end
 
+
   def create
     @user = User.new(params[:user])
 
-    unless ApplicationSupport.valid_email(@user.email)
+    unless valid_email(@user.email)
       flash.now[:alert] = "Ikke en gyldig epostaddresse"
       render :action=>"new"
       return
     end
 
-    token = ApplicationSupport.generate_token
+    token = generate_token
 
     existing_user = User.find_by_email(@user.email)
     if existing_user !=nil
       existing_user.token = token
       existing_user.save
-      Mailer.deliver_existing_user_token_notification(exising_user)
-      
+      Mailer.deliver_existing_user_token_notification(existing_user)      
       flash[:notice] = "Epost med lenke for å logge seg inn er sendt til #{existing_user.email}"
-
     else
       @user.token = token
-      @user.company = ApplicationSupport.find_company_by_email(@user.email)
-      if ApplicationSupport.is_admin(@user.email)
+      @user.company = find_company_by_email(@user.email)
+
+      if is_admin(@user.email)
         @user.admin = true
       else
         @user.admin = false
       end
-      logger.debug("the company #{@user.company}")
+
       if @user.save
         Mailer.deliver_new_user_token_notification(@user)            
         flash[:notice] = "Epost med lenke for å logge seg inn er sendt til #{@user.email}"       
@@ -51,6 +56,7 @@ class UsersController < ApplicationController
         render :action => "new"       
         return
       end      
+
     end
   end
 
@@ -67,8 +73,6 @@ class UsersController < ApplicationController
       return
     end
   end
-  
-  
 
 
 end

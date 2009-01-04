@@ -1,11 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+alpha_comment:
   text: one
   owner_id: 1
   regards_proposal_id: 1
 
-two:
+beta_comment:
   text: two
   owner_id: 2
   regards_proposal_id: 2
+
+demo_comment:
+  text: three
+  owner_id: 4
+  regards_proposal_id: 3

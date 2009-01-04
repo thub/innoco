@@ -1,33 +1,31 @@
-
-
 <h2> Ditt bidrag </h2>
 
 
 <table width="90%">
 
 <% form_for(@proposal) do |f| %>
-<%= f.error_messages %>
-<tr>
-	<td>Kundens behov </td>
-</tr>
-<tr>
-	<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
-</tr>
+	<%= f.error_messages %>
+	<tr>
+		<td>Kundens behov </td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
+	</tr>
 
-<tr>
-	<td>Din løsning</td>
-</tr>
-<tr>
+	<tr>
+		<td>Din løsning</td>
+	</tr>
+	<tr>
 
-	<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
-</tr>
+		<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
+	</tr>
 
-<tr>
-	<td align="right">
-		<%= f.submit "Send" %>
-	</td>
-</tr>
-<% end %>
+	<tr>
+		<td align="right">
+			<%= f.submit "Send" %>
+		</td>
+	</tr>
+	<% end %>
 </table>
 
 <h2> Nye bidrag </h2>
@@ -55,11 +53,17 @@
 	</tr>	
 
 	<tr>
-		<td>Antall kommentarer: <%=number_of_comments(proposal)%> </td>		
+		<td>Antall kommentarer: <%=proposal.comments.size%> </td>		
 		<td align="right" colspan="2">
+			<% if user_can_be_shown_proposal(current_user,proposal) %>										
 			<%= link_to 'Vis', proposal_path(proposal) %>
-			<% if is_owner(proposal,current_user) %>			
+			<%end%>
+
+			<% if user_can_edit_proposal(current_user,proposal) %>									
 			<%= link_to 'Endre', edit_proposal_path(proposal) %>
+			<%end%>
+
+			<% if user_can_destroy_proposal(current_user,proposal) %>									
 			<%= link_to 'Slett', proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
 			<% end %>
 
@@ -80,8 +84,6 @@
 		</td>
 	</tr>
 </table>
-
-
 
 <br />
 

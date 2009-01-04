@@ -10,7 +10,7 @@ class ProposalsController < ApplicationController
 
   def show
     @proposal = Proposal.find(params[:id])
-    unless proposal_can_be_shown_to_current_user(@proposal)
+    unless user_can_be_shown_proposal(current_user,@proposal)
       redirect_to intruder_path
       return
     end
@@ -19,14 +19,9 @@ class ProposalsController < ApplicationController
   end
 
 
-  def proposal_can_be_shown_to_current_user(proposal)
-    proposal.owner.company == current_user.company || current_user.admin
-  end
-
-
   def edit
     @proposal = Proposal.find(params[:id])
-    unless @proposal.owner.id == current_user.id
+    unless user_can_edit_proposal(current_user,@proposal)
       redirect_to intruder_path
       return
     end
@@ -46,13 +41,13 @@ class ProposalsController < ApplicationController
     else
       render :action => "new"
     end
-
   end
+
 
   def update
     @proposal = Proposal.find(params[:id])
 
-    unless @proposal.owner.id == current_user.id
+    unless user_can_update_proposal(current_user,@proposal)
       redirect_to intruder_path
       return
     end
@@ -81,7 +76,7 @@ class ProposalsController < ApplicationController
   def destroy
     @proposal = Proposal.find(params[:id])
 
-    unless @proposal.owner.id == current_user.id
+    unless user_can_destroy_proposal(current_user,@proposal)
       redirect_to intruder_path
       return
     end

@@ -1,20 +1,27 @@
 class CommentsController < ApplicationController
 
+
   def edit
     @comment = Comment.find(params[:id])
 
-    unless @comment.owner.id == current_user.id
+    unless user_can_edit_comment(current_user,@comment)
       redirect_to intruder_path
       return
     end
 
   end
 
+
   def create
     @comment = Comment.new(params[:comment])
     @proposal = Proposal.find(params[:regards_proposal_id])
     @comment.regards_proposal = @proposal  
     @comment.owner = current_user
+
+    unless user_can_create_comment_regarding_proposal(current_user,@comment.regards_proposal)
+      redirect_to intruder_path
+      return
+    end
 
     if @comment.save
       flash[:notice] = 'Din kommentar ble registrert.'
@@ -27,10 +34,12 @@ class CommentsController < ApplicationController
     end
   end
 
+  
+  
   def update
     @comment = Comment.find(params[:id])
 
-    unless @comment.owner.id == current_user.id
+    unless user_can_update_comment(current_user,@comment)
       redirect_to intruder_path
       return
     end
@@ -49,9 +58,11 @@ class CommentsController < ApplicationController
     end
   end
 
+
   def destroy
     @comment = Comment.find(params[:id])
-    unless @comment.owner.id == current_user.id
+    
+    unless user_can_destroy_comment(current_user,@comment)
       redirect_to intruder_path
       return
     end
@@ -60,6 +71,7 @@ class CommentsController < ApplicationController
     flash[:notice] = 'Din kommentar ble slettet'
     redirect_to(@comment.regards_proposal)
     return
-
   end
+
+
 end

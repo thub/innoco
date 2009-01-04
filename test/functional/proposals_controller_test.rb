@@ -21,6 +21,7 @@ class ProposalsControllerTest < ActionController::TestCase
     assert_redirected_to welcome_path
   end
 
+
   test "should create proposal" do
     login users(:alpha_user)
     assert_difference('Proposal.count') do
@@ -71,21 +72,24 @@ class ProposalsControllerTest < ActionController::TestCase
   end
 
 
-  test "admin user should not get edit on alpha proposal" do
+  test "admin user should get edit on alpha proposal" do
     login users(:admin_user)
     get :edit, :id => proposals(:alpha_proposal).id
-    assert_redirected_to intruder_path
+    assert_response :success
   end
+
 
   test "edit should redirect to welcome when not logged in" do
     get :edit, :id => proposals(:alpha_proposal).id
     assert_redirected_to welcome_path
   end
 
+
   test "update should redirect to welcome when not logged in" do 
     put :update, :id => proposals(:alpha_proposal).id, :proposal => {:customer_requirement => "fail", :suggested_solution => "fail" }
     assert_redirected_to welcome_path
   end
+
 
   test "alpha user should be able to update own proposal" do
     login users(:alpha_user)
@@ -95,12 +99,14 @@ class ProposalsControllerTest < ActionController::TestCase
     assert_not_nil Proposal.find(proposals(:alpha_proposal).id).modified_at    
   end
 
+
   test "should update modified_at" do
     login users(:alpha_user)
     assert_nil Proposal.find(proposals(:alpha_proposal).id).modified_at
     put :update, :id => proposals(:alpha_proposal).id, :proposal => {:customer_requirement => "otherd", :suggested_solution => "otherd" }
     assert Proposal.find(proposals(:alpha_proposal).id).modified_at!=nil
   end
+
 
   test "should not update modified_at when no text has changed" do
     login users(:alpha_user)
@@ -114,15 +120,24 @@ class ProposalsControllerTest < ActionController::TestCase
   end
 
 
+  test "alpha user should be able to destroy own proposal" do
+    login users(:alpha_user)
+    assert_difference('Proposal.count', -1) do
+      delete :destroy, :id => proposals(:alpha_proposal).id
+    end
 
-  # 
-  # test "should destroy proposal" do
-  #   assert_difference('Proposal.count', -1) do
-  #     delete :destroy, :id => proposals(:one).id
-  #   end
-  # 
-  #   assert_redirected_to proposals_path
-  # end
+    assert_redirected_to proposals_path
+  end
+
+
+  test "beta user should not be able to destroy alpha proposal" do
+    login users(:beta_user)
+    assert_no_difference('Proposal.count', -1) do
+      delete :destroy, :id => proposals(:alpha_proposal).id
+    end
+
+    assert_redirected_to intruder_path
+  end
 
 
   def login(user)

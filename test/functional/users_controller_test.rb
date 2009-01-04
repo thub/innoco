@@ -51,10 +51,50 @@ class UsersControllerTest < ActionController::TestCase
   end
 
 
+  test "should create user and send email" do
+    email = "new.user@alpha.com"
+    assert ActionMailer::Base.deliveries.empty?
+    post :create, :user=>{:email=>email}
+    assert !ActionMailer::Base.deliveries.empty?    
+    sent = ActionMailer::Base.deliveries.first
+    assert_equal [email], sent.to
+    assert_equal "[#{SITE}] Lenke til å logge seg inn med", sent.subject
+    @user =  User.find_by_email(email)
+    assert_not_nil @user
+    assert_response :success
+  end
+
+  test "should create user connected to alpha company" do
+    email = "new.user@alpha.com"
+    post :create, :user=>{:email=>email}
+    @user =  User.find_by_email(email)
+    assert_equal companies(:alpha_company).id , @user.company.id
+    assert_response :success
+  end
+
+  test "should create user connected to demo company" do
+    email = "new.user@somedomain.com"
+    post :create, :user=>{:email=>email}
+    @user =  User.find_by_email(email)
+    assert_equal companies(:demo_company).id , @user.company.id
+    assert_response :success
+  end
+
+
+  test "should create user with admin rights" do
+    email = "new.user@innoco.no"
+    post :create, :user=>{:email=>email}
+    @user =  User.find_by_email(email)
+    assert @user.admin
+    assert_response :success
+  end
+
+
+
   def login(user)
-     get '/enter',:token => user.token
-     assert_not_nil @request.session[:current_user]
-   end
+    get '/enter',:token => user.token
+    assert_not_nil @request.session[:current_user]
+  end
 
 end
 

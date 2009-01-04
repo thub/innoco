@@ -1,19 +1,19 @@
 <table width="90%">
-	
+
 <% form_for @comment do |f| %>
 
-	<tr>
-		<td>Din kommentar:</td>
-	</tr>
-	<tr>
-		<td><%= f.text_area :text,:cols=>60,:rows=>4 %></td>
-	</tr>
+<tr>
+	<td>Din kommentar:</td>
+</tr>
+<tr>
+	<td><%= f.text_area :text,:cols=>60,:rows=>4 %></td>
+</tr>
 
-	<tr>
-		<td align="right">
-			<%= f.submit "Oppdater" %>
-		</td>
-	</tr>
+<tr>
+	<td align="right">
+		<%= f.submit "Oppdater" %>
+	</td>
+</tr>
 <% end %>
 </table>
 

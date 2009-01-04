@@ -1,20 +1,19 @@
-
 <h2>
 	Bidrag #<%=h @proposal.id%> fra <%=h @proposal.owner.email %>
 </h2>
-	
+
 <p>
 	Lagt inn <%=l @proposal.created_at,:format => 'short' %>
 	<% if @proposal.modified_at %>
 	<br/>
-		<b>Oppdatert <%=l @proposal.modified_at,:format => 'short' %></b>
+	<b>Oppdatert <%=l @proposal.modified_at,:format => 'short' %></b>
 	<%end%>
 </p>
 
 
 
 <table width="95%">
-	
+
 	<tr>
 		<td>Kundens behov:</td>
 	</tr>
@@ -35,10 +34,14 @@
 
 	<tr>
 		<td align="right">
-			<% if is_owner(@proposal,current_user) %>
-			<%= link_to 'Endre', edit_proposal_path(@proposal) %>	
-			<%= link_to 'Slett', @proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
+			<% if user_can_edit_proposal(current_user,@proposal) %>									
+			<%= link_to 'Endre', edit_proposal_path(@proposal) %>
 			<%end%>
+
+			<% if user_can_destroy_proposal(current_user,@proposal) %>									
+			<%= link_to 'Slett', @proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
+			<% end %>
+
 		</td>
 	</tr>
 	<tr>
@@ -48,7 +51,7 @@
 	</tr>
 </table>
 
-<h2> <%=number_of_comments(@proposal)%> Kommentarer </h2>
+<h2> <%=@proposal.comments.size%> Kommentarer </h2>
 
 <table width="90%">
 
@@ -56,26 +59,31 @@
 <tr>
 	<td colspan="2"><p class="dashed"></p></td>
 </tr>
-	
-  <tr>
+
+<tr>
 	<td valign="top">
 		Fra: <b><%=h comment.owner.email %></b> registrert <%=l comment.created_at,:format => 'short' %> 
 		<% if comment.modified_at %>
 		<br/>
-			<b>Oppdatert <%=l comment.modified_at,:format => 'short' %></b>
+		<b>Oppdatert <%=l comment.modified_at,:format => 'short' %></b>
 		<%end%>
-	
+
 	</td>
 	<td valign="top" align="right">
-	<% if is_owner(comment,current_user) %>
-    	<%= link_to 'Endre', edit_comment_path(comment) %>
-    	<%= link_to 'Slett', comment, :confirm => 'Er du sikker på at du vil slette kommentaren?', :method => :delete %>
-	<% end %>
+
+		<% if user_can_edit_comment(current_user,comment) %>									
+		<%= link_to 'Endre', edit_comment_path(comment) %>
+		<% end %>
+		
+		<% if user_can_destroy_comment(current_user,comment) %>									
+		<%= link_to 'Slett', comment, :confirm => 'Er du sikker på at du vil slette kommentaren?', :method => :delete %>
+		<% end %>
+
 	</td>
-  </tr>
-  <tr>
+</tr>
+<tr>
 	<td valign="top" colspan="2"><pre><%= word_wrap comment.text, 60 %></pre></td>
-  </tr>
+</tr>
 <% end %>
 <tr>
 	<td colspan="2" align="center"><%= will_paginate @comments %></td>
@@ -83,25 +91,25 @@
 
 </table>
 <table width="90%">
-	
+
 <% form_for @comment, :url=>add_comment_path(@proposal) do |f| %>
 
 <tr>
 	<td colspan="2"><p class="dashed"></p></td>
 </tr>
 
-	<tr>
-		<td>Din kommentar:</td>
-	</tr>
-	<tr>
-		<td><%= f.text_area :text,:cols=>60,:rows=>4 %></td>
-	</tr>
+<tr>
+	<td>Din kommentar:</td>
+</tr>
+<tr>
+	<td><%= f.text_area :text,:cols=>60,:rows=>4 %></td>
+</tr>
 
-	<tr>
-		<td align="right">
-			<%= f.submit "Legg til" %>
-		</td>
-	</tr>
+<tr>
+	<td align="right">
+		<%= f.submit "Legg til" %>
+	</td>
+</tr>
 <% end %>
 </table>
 

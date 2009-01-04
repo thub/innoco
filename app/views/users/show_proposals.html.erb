@@ -1,4 +1,3 @@
-
 <h2> Dine bidrag </h2>
 <table width="90%">
 
@@ -21,14 +20,21 @@
 </tr>	
 
 <tr>
-	<td>Antall kommentarer: <%=number_of_comments(proposal)%> </td>		
+	<td>Antall kommentarer: <%=proposal.comments.size%> </td>		
 	<td align="right" colspan="2">
+		<% if user_can_be_shown_proposal(current_user,proposal) %>										
 		<%= link_to 'Vis', proposal_path(proposal) %>
-		<% if is_owner(proposal,current_user) %>			
-			<%= link_to 'Endre', edit_proposal_path(proposal) %>
-			<%= link_to 'Slett', proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
+		<%end%>
+
+		<% if user_can_edit_proposal(current_user,proposal) %>									
+		<%= link_to 'Endre', edit_proposal_path(proposal) %>
+		<%end%>
+
+		<% if user_can_destroy_proposal(current_user,proposal) %>									
+		<%= link_to 'Slett', proposal, :confirm => 'Er du sikker på at du skal slette dette bidraget ?', :method => :delete %>
 		<% end %>
-		
+
+
 	</td>
 </tr>
 
