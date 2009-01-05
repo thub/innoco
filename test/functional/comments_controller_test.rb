@@ -84,4 +84,12 @@ class CommentsControllerTest < ActionController::TestCase
     assert_redirected_to intruder_path    
   end
 
+  test "should create comment with more than 256 characters" do
+    login users(:alpha_user)
+    post :create, {:regards_proposal_id => proposals(:alpha_proposal).id,:comment => {'id'=>'1','text' =>"t"*1000 }}   
+    comment =  Comment.find(:last);
+    assert_equal 1000, comment.text.length
+    assert_redirected_to comment.regards_proposal 
+  end
+  
 end

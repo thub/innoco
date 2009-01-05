@@ -138,6 +138,16 @@ class ProposalsControllerTest < ActionController::TestCase
 
     assert_redirected_to intruder_path
   end
+  
+  test "should create proposal with long text fields" do
+     login users(:alpha_user)
+     assert_difference('Proposal.count') do
+       post :create, :proposal => {:customer_requirement => "c"*1000,:suggested_solution => "s"*1000 }
+     end
+     proposal = Proposal.find(:last)
+     assert_equal 1000, proposal.customer_requirement.length
+     assert_equal 1000, proposal.suggested_solution.length
+   end
 
 
   def login(user)

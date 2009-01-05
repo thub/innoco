@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081215190338) do
+ActiveRecord::Schema.define(:version => 20090105080342) do
 
   create_table "comments", :force => true do |t|
-    t.string   "text"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(:version => 20081215190338) do
   end
 
   create_table "proposals", :force => true do |t|
-    t.string   "customer_requirement"
-    t.string   "suggested_solution"
+    t.text     "customer_requirement"
+    t.text     "suggested_solution"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
