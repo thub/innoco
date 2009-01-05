@@ -33,6 +33,10 @@ class ProposalsController < ApplicationController
     @proposal.owner = current_user
     @proposal.company = current_user.company
     logger.debug("Owner is #{@proposal.owner}")
+    
+    @proposal.display_id = @proposal.company.proposal_count
+    @proposal.company.proposal_count += 1
+    @proposal.company.save
 
     if @proposal.save
       flash[:notice] = 'Ditt bidrag ble registrert.'

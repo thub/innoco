@@ -138,16 +138,43 @@ class ProposalsControllerTest < ActionController::TestCase
 
     assert_redirected_to intruder_path
   end
-  
+
+
   test "should create proposal with long text fields" do
-     login users(:alpha_user)
-     assert_difference('Proposal.count') do
-       post :create, :proposal => {:customer_requirement => "c"*1000,:suggested_solution => "s"*1000 }
-     end
-     proposal = Proposal.find(:last)
-     assert_equal 1000, proposal.customer_requirement.length
-     assert_equal 1000, proposal.suggested_solution.length
-   end
+    login users(:alpha_user)
+    assert_difference('Proposal.count') do
+      post :create, :proposal => {:customer_requirement => "c"*1000,:suggested_solution => "s"*1000 }
+    end
+    proposal = Proposal.find(:last)
+    assert_equal 1000, proposal.customer_requirement.length
+    assert_equal 1000, proposal.suggested_solution.length
+  end
+
+  test "should increment proposals display_id seperately for different companies" do
+    login users(:alpha_user)
+    post :create, :proposal => {:customer_requirement => "c",:suggested_solution => "s" }
+    proposal = Proposal.find(:last)
+    alpha_display_id = proposal.display_id
+    
+    
+    login users(:beta_user)
+    post :create, :proposal => {:customer_requirement => "c",:suggested_solution => "s" }
+    proposal = Proposal.find(:last)
+    beta_display_id = proposal.display_id
+    
+    login users(:alpha_user)
+    post :create, :proposal => {:customer_requirement => "c",:suggested_solution => "s" }
+    proposal = Proposal.find(:last)
+    alpha_next_display_id = proposal.display_id
+
+    login users(:beta_user)
+    post :create, :proposal => {:customer_requirement => "c",:suggested_solution => "s" }
+    proposal = Proposal.find(:last)
+    beta_next_display_id = proposal.display_id
+    
+    assert_equal alpha_display_id+1,alpha_next_display_id
+    assert_equal beta_display_id+1,beta_next_display_id
+  end
 
 
   def login(user)

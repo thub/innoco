@@ -4,15 +4,18 @@ alpha_company:
   id: 1
   name: 
   domain: alpha.com
+  proposal_count: 100
 
 
 beta_company:
   id: 2
   name: 
   domain: beta.com
+  proposal_count: 100
 
 demo_company:
   id: 3
   name: Demo
   domain: nil
+  proposal_count: 100
   

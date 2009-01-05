@@ -9,7 +9,7 @@
 
 <tr>
 	<td valign="top">
-		Gjelder bidrag #<%=h comment.regards_proposal.id%> fra <%=h comment.regards_proposal.owner.email %>
+		Gjelder bidrag #<%=h comment.regards_proposal.display_id%> fra <%=h comment.regards_proposal.owner.email %>
 		<br/>
 		Din kommentar registrert <%=l comment.created_at,:format => 'short' %> :
 		<% if comment.modified_at %>

@@ -37,7 +37,7 @@
 	<% for proposal in @proposals %>
 	<tr>
 		<td>
-			Bidrag #<%=h proposal.id%> fra <%=h proposal.owner.email %>
+			Bidrag #<%=h proposal.display_id%> fra <%=h proposal.owner.email %>
 		</td>
 		<td align="right"><%=l proposal.created_at,:format => 'short' %></td>
 	</tr>
