@@ -1,9 +1,8 @@
 
 	<% if current_user %>
-		<p>Du er logget inn med epost <%= current_user.email %> og knyttet til selskapet <%=current_user.company.name%></p>
 
 
-		<p><%= link_to "Alle innlegg for #{current_user.company.name}", proposals_url %></p>
+		<p><%= link_to "Alle bidrag", proposals_url %></p>
 		<p><%= link_to 'Dine bidrag', your_proposals_url %></p>
 		<p><%= link_to 'Dine kommentarer', your_comments_url %></p>
 		

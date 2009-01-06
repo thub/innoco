@@ -1,5 +1,4 @@
-<h1>Editering av bidrag</h1>
-
+<h2>Endre bidrag</h2>
 <table>
 	
 <% form_for(@proposal) do |f| %>
@@ -8,7 +7,7 @@
 		<td>Kundens behov </td>
 	</tr>
 	<tr>
-		<td><%= f.text_area :customer_requirement,:rows=>4 %></td>
+		<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
 	</tr>
 
 	<tr>
@@ -16,7 +15,7 @@
 	</tr>
 	<tr>
 		
-		<td><%= f.text_area :suggested_solution,:rows=>4 %></td>
+		<td><%= f.text_area :suggested_solution,:cols=>60,:rows=>4 %></td>
 	</tr>
 
 	<tr>
