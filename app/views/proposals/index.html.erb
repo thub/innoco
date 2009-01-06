@@ -37,7 +37,7 @@
 	<% for proposal in @proposals %>
 	<tr>
 		<td>
-			Bidrag #<%=h proposal.display_id%> fra <%=h proposal.owner.email %>
+			<%= link_to "Bidrag ##{h proposal.display_id} fra #{h proposal.owner.email}", proposal_path(proposal) %>
 		</td>
 		<td align="right"><%=l proposal.created_at,:format => 'short' %></td>
 	</tr>
@@ -55,9 +55,9 @@
 	<tr>
 		<td>Antall kommentarer: <%=proposal.comments.size%> </td>		
 		<td align="right" colspan="2">
-			<% if user_can_be_shown_proposal(current_user,proposal) %>										
-			<%= link_to 'Vis', proposal_path(proposal) %>
-			<%end%>
+			<!-- <% if user_can_be_shown_proposal(current_user,proposal) %>										
+						<%= link_to 'Vis', proposal_path(proposal) %>
+						<%end%> -->
 
 			<% if user_can_edit_proposal(current_user,proposal) %>									
 			<%= link_to 'Endre', edit_proposal_path(proposal) %>
