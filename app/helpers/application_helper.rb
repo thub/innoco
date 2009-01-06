@@ -13,4 +13,8 @@ module ApplicationHelper
     current_user!=nil
   end
   
+  def logo_for_user(user)
+    return "logos/#{user.company.logo}"
+  end
+  
 end

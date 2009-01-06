@@ -9,29 +9,29 @@
 </head>
 <body>
 
-	<div id="wrapper">
-		<div id="top">
-		
-		</div>
-
-
-		<div id="content">
-
-			<div id="menu">				
+	<div id="container">
+		<%= (logo = yield :logo) ? logo : render(:partial => 'shared/logo.html.erb') %>				
+	
+		<div id="main_content_top"></div>
+		<div id="main_content">
+			<div class="content">
+				<p style="color: green"><%= flash[:notice] %></p>
+				<p style="color: red"><%= flash[:alert] %></p>
+				<%= yield  %>
+			</div>
+			<div class="menu">
 				<%= (sidebar = yield :sidebar) ? sidebar : render(:partial => 'shared/menu.html.erb') %>				
 			</div>
 
-			<div id="stuff">
-				<p style="color: green"><%= flash[:notice] %></p>
-				<p style="color: red"><%= flash[:alert] %></p>
-				
-				<%= yield  %>
+			<div id="clear"></div>
+
+			<div id="main_content_bottom">
 			</div>
-		</div>
 
-		<div id="bottom">
-		</div>
+			<div id="footer"><strong>Copyright &copy; 2009</strong> | <a href="http://www.innoco.no">Innoco AS</a> </div>
 
+		</div>
 	</div>
+
 </body>
 </html>
