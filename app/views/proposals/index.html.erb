@@ -1,6 +1,13 @@
 
-
-<table width="90%">
+	<div class="roundcont">
+	   <div class="roundtop">
+		 <img src="stylesheets/images/tl.gif" alt="" width="15" height="15" class="corner" style="display: none" />
+	   </div>
+	 
+	
+	
+	
+<table align="center" width="80%">
 
 <% form_for(@proposal) do |f| %>
 	<%= f.error_messages %>
@@ -8,7 +15,12 @@
 		<td>Kundens behov </td>
 	</tr>
 	<tr>
-		<td><%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %></td>
+		<td>
+	
+		
+		<%= f.text_area :customer_requirement,:cols=>60,:rows=>4 %>
+	
+		</td>
 	</tr>
 
 	<tr>
@@ -27,13 +39,21 @@
 	<% end %>
 </table>
 
+	<div class="roundbottom">
+		 <img src="stylesheets/images/bl.gif" alt="" width="15" height="15" class="corner" style="display: none" />
+	</div>
+</div>
+	
+ 
+
+
 <br/>
 <br/>
 
 <h2> Nye bidrag </h2>
 
 
-<table width="95%">
+<table align="center" width="95%">
 
 
 	<% for proposal in @proposals %>

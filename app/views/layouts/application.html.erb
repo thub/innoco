@@ -10,7 +10,9 @@
 <body>
 
 	<div id="container">
-		<%= (logo = yield :logo) ? logo : render(:partial => 'shared/logo.html.erb') %>				
+		<%= (logo = yield :logo) ? logo : render(:partial => 'shared/logo.html.erb') %>		
+		<div id="sub_header"></div>
+				
 	
 		<div id="main_content_top"></div>
 		<div id="main_content">

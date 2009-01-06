@@ -1,7 +1,7 @@
 
 	<% if current_user %>
 
-
+<p> Du er logget inn som <%=current_user.email%> </p>
 		<p><%= link_to "Alle bidrag", proposals_url %></p>
 		<p><%= link_to 'Dine bidrag', your_proposals_url %></p>
 		<p><%= link_to 'Dine kommentarer', your_comments_url %></p>
@@ -9,6 +9,7 @@
 
 
 		<p><%= link_to 'Logout', logout_url %></p>		
+		
 		<p>Applikasjonen vil huske deg selv om du lukker dette vinduet. Dersom deler denne maskinen med andre så vennligst klikk logout når du er ferdig.</p>
 		
 		

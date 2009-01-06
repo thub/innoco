@@ -1,5 +1,5 @@
 body {
-	background: #CACACA; /*url(images/background.png) repeat-x;*/
+	  background: #fff;
 	/*	font-family: "Trebuchet MS", Verdana, serif*/
 	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
 }
@@ -116,4 +116,29 @@ a.menu_link:hover {
 img
 {
 	-ms-interpolation-mode: bicubic;
+}
+
+.roundcont {
+	width: 510px;
+	background-color: #f90;
+	color: #fff;
+}
+
+.roundcont p {
+	margin: 0 10px;
+}
+
+.roundtop { 
+	background: url('images/tr.gif') no-repeat top right; 
+}
+
+.roundbottom {
+	background: url('images/br.gif') no-repeat top right; 
+}
+
+img.corner {
+   width: 15px;
+   height: 15px;
+   border: none;
+   display: block !important;
 }
