@@ -20,16 +20,16 @@ body {
 #main_content {
 	margin: 0 auto;
 	width: 100%;
-	background: #FFFFFF url('images/background_content.gif');
+	background: #EEEEEE url('ximages/background_content.gif');
 	background-repeat: repeat-y
 } 
 #main_content_top {
 	height: 30px;
-	background: #FFFFFF url('images/background_top.gif');
+	background: #EEEEEE url('ximages/background_top.gif');
 } 
 #main_content_bottom {
 	height: 30px;
-	background: #FFFFFF url('images/background_bottom.gif');
+	background: #EEEEEE url('ximages/background_bottom.gif');
 }
 #footer {
 	text-align: center;
