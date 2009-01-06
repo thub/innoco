@@ -1,6 +1,7 @@
 body {
-	background: #CACACA url(images/background.png) repeat-x;
-	font-family: "Trebuchet MS", Verdana, serif
+	background: #CACACA; /*url(images/background.png) repeat-x;*/
+	/*	font-family: "Trebuchet MS", Verdana, serif*/
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
 }
 #container {
 	margin: 0 auto;
@@ -20,16 +21,12 @@ body {
 #main_content {
 	margin: 0 auto;
 	width: 100%;
-	xbackground: #EEEEEE /*url('ximages/background_content.gif');*/
-	/*background-repeat: repeat-y*/
-	} 
+} 
 #main_content_top {
 	height: 30px;
-	xbackground: #EEEEEE /*url('ximages/background_top.gif');*/
 } 
 #main_content_bottom {
 	height: 30px;
-	xbackground: #EEEEEE /*url('ximages/background_bottom.gif');*/
 }
 #footer {
 	text-align: center;
@@ -61,13 +58,13 @@ body {
 	margin-bottom: 0px;
 	font-size: 28px;
 	font-weight: bold;
-	color: #A40008
+	color: #333;
 }
 .content h2 {
 	margin-top: 0px;
 	font-size: 18px;
 	font-weight: bold;
-	color: #A40008
+	color: #333;
 }
 #clear {
 	display: block;
@@ -79,7 +76,8 @@ body {
 .menu_title {
 	font-size: 18px;
 	font-weight: bold;
-	color: #A40008
+	/*color: #A40008*/
+	color:blue;
 }
 .menu ul {
 	margin: 0;
@@ -90,12 +88,11 @@ body {
 	list-style-type: circle
 }
 a {
-	color: #A40008;
+	color: #3b5998;
 	font-weight: bold;
 	text-decoration: none
 }
 a:hover {
-	color: #A40008;
 	font-weight: bold;
 	text-decoration: underline
 }
@@ -118,5 +115,5 @@ a.menu_link:hover {
 
 img
 {
--ms-interpolation-mode: bicubic;
+	-ms-interpolation-mode: bicubic;
 }
