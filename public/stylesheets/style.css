@@ -115,3 +115,8 @@ a.menu_link:hover {
 	font-weight: bold;
 	font-style: italic
 }
+
+img
+{
+-ms-interpolation-mode: bicubic;
+}
