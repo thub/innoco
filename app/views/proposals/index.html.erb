@@ -65,21 +65,18 @@
 	</tr>
 	<tr>
 		<td colspan="2">
-			Behov: <%= truncate proposal.customer_requirement, :length=>40 %> <br/>
+			Behov: <%= h truncate proposal.customer_requirement, :length=>40 %> <br/>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			Løsning: <%= truncate proposal.suggested_solution, :length=>40 %>
+			Løsning: <%= h truncate proposal.suggested_solution, :length=>40 %>
 		</td>
 	</tr>	
 
 	<tr>
 		<td>Antall kommentarer: <%=proposal.comments.size%> </td>		
 		<td align="right" colspan="2">
-			<!-- <% if user_can_be_shown_proposal(current_user,proposal) %>										
-						<%= link_to 'Vis', proposal_path(proposal) %>
-						<%end%> -->
 
 			<% if user_can_edit_proposal(current_user,proposal) %>									
 			<%= link_to 'Endre', edit_proposal_path(proposal) %>

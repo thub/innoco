@@ -10,12 +10,12 @@
 </tr>
 <tr>
 	<td colspan="2">
-		Behov: <%= truncate proposal.customer_requirement, 40 %> <br/>
+		Behov: <%= h truncate proposal.customer_requirement, 40 %> <br/>
 	</td>
 </tr>
 <tr>
 	<td colspan="2">
-		Løsning: <%= truncate proposal.suggested_solution, 40 %>
+		Løsning: <%= h truncate proposal.suggested_solution, 40 %>
 	</td>
 </tr>	
 
